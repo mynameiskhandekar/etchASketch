@@ -1,6 +1,6 @@
 let container = document.querySelector("#container");
 let resizeButton = document.querySelector("#resizeButton");
-
+container.style.backgroundColor = "gray"
 function createGrid(size) {
     container.innerHTML = "";
     const squareSize = 600/size;
@@ -10,17 +10,14 @@ function createGrid(size) {
 
         innerdiv.style.width = `${squareSize}px`;
         innerdiv.style.height = `${squareSize}px`;
+
+        innerdiv.style.backgroundColor = "white";
+        innerdiv.style.opacity = 0;
     
         innerdiv.addEventListener("mouseenter", () => {
-            let currOp = 0.1;
+            let currOp = parseFloat(innerdiv.style.opacity);
+            currOp = Math.min(currOp+0.1, 1);
             innerdiv.style.opacity = currOp;
-            innerdiv.style.backgroundColor = "gray";
-            if(innerdiv.style.opacity <= 0.9) {
-                innerdiv.style.opacity = `${currOp + 0.1}`;
-            } else {
-                innerdiv.style.opacity = 1;
-            }
-            
         });
         container.appendChild(innerdiv);
     }

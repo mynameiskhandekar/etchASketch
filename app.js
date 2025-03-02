@@ -12,7 +12,7 @@ function createGrid(size) {
         innerdiv.style.height = `${squareSize}px`;
     
         innerdiv.addEventListener("mouseenter", () => {
-            innerdiv.style.backgroundColor = "gray";
+            innerdiv.classList.add("boxStyling");
         });
         container.appendChild(innerdiv);
     }

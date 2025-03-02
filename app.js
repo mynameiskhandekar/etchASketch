@@ -3,7 +3,7 @@ let resizeButton = document.querySelector("#resizeButton");
 
 function createGrid(size) {
     container.innerHTML = "";
-    const squareSize = 400/size;
+    const squareSize = 600/size;
     for(let i=0; i<size*size; i++) {
         let innerdiv = document.createElement("div");
         innerdiv.classList.add("grid-square");

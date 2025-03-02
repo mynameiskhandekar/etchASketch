@@ -3,10 +3,14 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
 }
 .grid-square {
     border: 1px solid black;
     box-sizing: border-box;
+}
+#resizeButton {
+    padding: 10px 0;
+    margin: 10px 0;
 }

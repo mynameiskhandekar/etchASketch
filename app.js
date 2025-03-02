@@ -12,7 +12,7 @@ function createGrid(size) {
         innerdiv.style.height = `${squareSize}px`;
     
         innerdiv.addEventListener("mouseenter", () => {
-            innerdiv.style.backgroundColor = "gray";
+            innerdiv.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
         });
         container.appendChild(innerdiv);
     }
